@@ -6,7 +6,7 @@ module.exports = (req, res, next) => {
         const decode = jwt.verify(token, "webWatch");
         req.userData = decode
 
-        if(req.userData.signupRole === 'Admin') {
+        if(req.userData.signupRole === 'Admin' || req.userData.signupRole === 'Writer' || req.userData.signupRole === 'VoiceOver Artist/ Anchor' || req.userData.signupRole === 'Final Editor' || req.userData.signupRole === 'Raw Editor') {
             next();
         }else{
             throw new Error();
