@@ -20,9 +20,9 @@ require('./config');
 const port = process.env.PORT || 3000;
 
 const authRoute = require('./auth-route');
-app.use('/creator/auth',authRoute);
+app.use('/auth',authRoute);
 
-app.get('/creator',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send('Welcome PDN')
 });
 app.listen(port,()=>{
