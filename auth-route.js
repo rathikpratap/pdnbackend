@@ -6,7 +6,7 @@ const Task = require('./models/newTask');
 
 const jwt = require('jsonwebtoken');
 const checkAuth = require('./middleware/check-auth');
-const req = require('express/lib/request');
+//const req = require('express/lib/request');
 
 
 router.post('/login', (req, res) => {

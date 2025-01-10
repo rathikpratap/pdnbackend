@@ -20,6 +20,7 @@ require('./config');
 const port = process.env.PORT || 3000;
 
 const authRoute = require('./auth-route');
+// app.use('/creator/auth',authRoute);
 app.use('/auth',authRoute);
 
 app.get('/',(req,res)=>{
